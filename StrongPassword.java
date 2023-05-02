@@ -17,12 +17,16 @@ She typed a random string of length  in the password field but wasn't sure if it
         boolean low = false;
         boolean special = false;
         for (char c : password.toCharArray()) {
+            //check for a digit 
             if (Character.isDigit(c)) {
                 digit = true;
+            //check for a lowercase letter
             } else if (Character.isLowerCase(c)) {
                 low = true;
+            //check for an uppercase 
             } else if (Character.isUpperCase(c)) {
                 up = true;
+            //check for a special character
             } else if (special_characters.indexOf(c) != -1) {
                 special = true;
             }
